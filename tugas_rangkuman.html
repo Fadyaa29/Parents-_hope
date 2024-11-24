@@ -180,3 +180,262 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Summary</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #fff; /* White background */
+            color: #333;
+        }
+
+        header {
+            background-color: #f8f9fa; /* Blue header */
+            color:#0d6efd; 
+            padding: 20px 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 10px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #007BFF; /* Blue heading text */
+        }
+
+        .card p {
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .card pre {
+            background-color: #f9f9f9;
+            border-left: 4px solid #007BFF;
+            padding: 10px;
+            font-size: 0.9rem;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #007BFF;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+  
+    <div class="container">
+        <div class="grid">
+            <!-- Card 1 -->
+            <div class="card">
+                <h2> JS Object Properties</h2>
+                <p>Properti objek adalah atribut yang menyimpan nilai. Contoh:</p>
+                <pre>
+const car = { brand: "Toyota", year: 2020 };
+console.log(car.brand); // Output: Toyota
+                </pre>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <h2> JS Object Methods</h2>
+                <p>Metode adalah fungsi yang terkait dengan objek. Contoh:</p>
+                <pre>
+const person = {
+    name: "Alice",
+    greet: function() {
+        return Hello, ${this.name};
+    }
+};
+console.log(person.greet()); // Output: Hello, Alice
+                </pre>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <h2> JS Object Display</h2>
+                <p>Objek dapat ditampilkan menggunakan <code>console.log()</code> atau <code>JSON.stringify()</code>.</p>
+                <pre>
+const obj = { key: "value" };
+console.log(JSON.stringify(obj)); // Output: {"key":"value"}
+                </pre>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="card">
+                <h2> JS Object Constructors</h2>
+                <p>Konstruktor adalah fungsi untuk membuat objek baru.</p>
+                <pre>
+function Car(brand, year) {
+    this.brand = brand;
+    this.year = year;
+}
+const car = new Car("Toyota", 2020);
+console.log(car.brand); // Output: Toyota
+                </pre>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="card">
+                <h2> JS Events</h2>
+                <p>Event adalah aksi yang dapat diproses oleh JavaScript, seperti klik tombol.</p>
+                <pre>
+document.getElementById("myButton").addEventListener("click", function() {
+    alert("Button clicked!");
+});
+                </pre>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="card">
+                <h2> JS Strings</h2>
+                <p>String digunakan untuk menyimpan teks.</p>
+                <pre>
+let greeting = "Hello, World!";
+console.log(greeting.length); // Output: 13
+                </pre>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="card">
+                <h2> JS String Methods</h2>
+                <p>Metode string digunakan untuk memanipulasi teks:</p>
+                <ul>
+                    <li><code>toUpperCase()</code>: Mengubah menjadi huruf kapital.</li>
+                    <li><code>toLowerCase()</code>: Mengubah menjadi huruf kecil.</li>
+                    <li><code>trim()</code>: Menghapus spasi di awal/akhir string.</li>
+                </ul>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="card">
+                <h2> JS String Search</h2>
+                <p>Mencari teks dalam string:</p>
+                <pre>
+let text = "Hello, JavaScript!";
+console.log(text.includes("JavaScript")); // Output: true
+                </pre>
+            </div>
+
+            <!-- Card 9 -->
+            <div class="card">
+                <h2> JS String Templates</h2>
+                <p>Template literal mempermudah penggabungan string:</p>
+                <pre>
+let name = "Alice";
+console.log(Hello, ${name}!); // Output: Hello, Alice!
+                </pre>
+            </div>
+
+            <!-- Card 10 -->
+            <div class="card">
+                <h2> JS Numbers</h2>
+                <p>Number adalah tipe data untuk angka.</p>
+                <pre>
+let x = 10, y = 20;
+console.log(x + y); // Output: 30
+                </pre>
+            </div>
+
+            <!-- Card 11 -->
+            <div class="card">
+                <h2> JS BigInt</h2>
+                <p>BigInt digunakan untuk angka yang sangat besar.</p>
+                <pre>
+let big = 123456789012345678901234567890n;
+console.log(big + 1n); // Output: 123456789012345678901234567891n
+                </pre>
+            </div>
+
+            <!-- Card 12 -->
+            <div class="card">
+                <h2> JS Number Methods</h2>
+                <p>Metode untuk angka:</p>
+                <ul>
+                    <li><code>toFixed()</code>: Membulatkan angka ke jumlah desimal tertentu.</li>
+                    <li><code>toString()</code>: Mengubah angka menjadi string.</li>
+                    <li><code>parseInt()</code>: Mengonversi string menjadi bilangan bulat.</li>
+                </ul>
+            </div>
+
+            <!-- Card 13 -->
+            <div class="card">
+                <h2> JS Number Properties</h2>
+                <p>Properti angka:</p>
+                <ul>
+                    <li><code>MAX_VALUE</code>: Nilai maksimal angka.</li>
+                    <li><code>MIN_VALUE</code>: Nilai minimal angka.</li>
+                    <li><code>NaN</code>: Not a Number.</li>
+                </ul>
+            </div>
+
+            <!-- Card 14 -->
+            <div class="card">
+                <h2> JS Arrays</h2>
+                <p>Array digunakan untuk menyimpan beberapa nilai dalam satu variabel.</p>
+                <pre>
+let fruits = ["Apple", "Banana", "Cherry"];
+console.log(fruits[1]); // Output: Banana
+                </pre>
+            </div>
+
+            <!-- Card 15 -->
+            <div class="card">
+                <h2> JS Array Methods</h2>
+                <p>Metode untuk array:</p>
+                <ul>
+                    <li><code>push()</code>: Menambahkan elemen di akhir array.</li>
+                    <li><code>pop()</code>: Menghapus elemen terakhir.</li>
+                    <li><code>shift()</code>: Menghapus elemen pertama.</li>
+                    <li><code>unshift()</code>: Menambahkan elemen di awal array.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 JavaScript Summary | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
