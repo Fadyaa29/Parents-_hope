@@ -641,11 +641,243 @@ date.setFullYear(2025);</code></pre>
         </div>
       </div>
 
-    </div>
-  </div>
+</body>
+</html>
 
-  <footer>
-    <p>&copy; 2024 JavaScript Summary | All Rights Reserved</p>
-</footer>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Complete Topics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            line-height: 1.8;
+        }
+
+        header {
+            background-color: #0056b3;
+            color: white;
+            padding: 20px 10px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 40px auto;
+            max-width: 1200px;
+            padding: 20px;
+        }
+
+        section {
+            width: 30%;
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #f7f9fc;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            font-size: 1.5rem;
+            color: #0056b3;
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+
+        section p {
+            margin-bottom: 10px;
+        }
+
+        ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 5px;
+        }
+
+        pre {
+            background-color: #f0f0f0;
+            border-left: 4px solid #0056b3;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            color: #333;
+            overflow-x: auto;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #0056b3;
+            color: white;
+            font-size: 1rem;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 900px) {
+            section {
+                width: 45%; 
+            }
+        }
+
+        @media (max-width: 600px) {
+            section {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1></h1>
+    </header>
+    <div class="container">
+
+        <section>
+            <h2> JS Loop For In</h2>
+            <p>Loop digunakan untuk iterasi properti enumerable dari sebuah objek.</p>
+            <pre>
+const person = { name: "Alice", age: 25 };
+for (let key in person) {
+    console.log(${key}: ${person[key]});
+}
+            </pre>
+        </section>
+
+        <section>
+            <h2> JS Loop For Of</h2>
+            <p>Loop digunakan untuk iterasi item dalam iterable seperti array atau string.</p>
+            <pre>
+let fruits = ["apple", "banana"];
+for (let fruit of fruits) {
+    console.log(fruit);
+}
+            </pre>
+        </section>
+
+        <section>
+            <h2> JS Loop While</h2>
+            <p>Loop while digunakan untuk iterasi selama kondisi tertentu benar.</p>
+            <pre>
+let i = 0;
+while (i < 5) {
+    console.log(i);
+    i++;
+}
+            </pre>
+        </section>
+
+        <section>
+            <h2> JS Break</h2>
+            <p>Menghentikan loop sebelum selesai.</p>
+            <pre>
+for (let i = 0; i < 10; i++) {
+    if (i === 5) break;
+    console.log(i);
+}
+            </pre>
+        </section>
+
+        <section>
+            <h2> JS Iterables</h2>
+            <p>Objek yang bisa diiterasi menggunakan <code>for..of</code>, seperti array dan string.</p>
+        </section>
+
+        <section>
+            <h2> JS Sets</h2>
+            <p>Objek yang menyimpan nilai unik.</p>
+            <pre>
+const set = new Set([1, 2, 3, 3]);
+console.log(set); // Output: Set(3) {1, 2, 3}
+            </pre>
+        </section>
+
+        <section>
+            <h2> JS Set Methods</h2>
+            <p>Metode yang digunakan dengan Set: <code>add()</code>, <code>delete()</code>, <code>has()</code>, <code>clear()</code>.</p>
+        </section>
+
+        <section>
+            <h2> JS Maps</h2>
+            <p>Objek pasangan kunci-nilai yang mempertahankan urutan penambahan.</p>
+            <pre>
+const map = new Map();
+map.set("key1", "value1");
+console.log(map.get("key1")); // Output: value1
+            </pre>
+        </section>
+
+        <section>
+            <h2> JS Map Methods</h2>
+            <p>Metode yang digunakan dengan Map: <code>set()</code>, <code>get()</code>, <code>delete()</code>, <code>has()</code>, <code>clear()</code>.</p>
+        </section>
+
+        <section>
+            <h2> JS Typeof</h2>
+            <p>Operator yang digunakan untuk mengecek tipe data.</p>
+            <pre>
+console.log(typeof "hello"); // Output: string
+            </pre>
+        </section>
+
+        <section>
+            <h2> JS Type Conversion</h2>
+            <p>Mengonversi tipe data, misalnya string ke number atau sebaliknya.</p>
+            <pre>
+let num = Number("10");
+console.log(typeof num); // Output: number
+            </pre>
+        </section>
+
+        <section>
+            <h2> JS Destructuring</h2>
+            <p>Mengambil nilai dari array atau properti objek menjadi variabel individu.</p>
+            <pre>
+const [a, b] = [1, 2];
+const { name, age } = { name: "Alice", age: 25 };
+            </pre>
+        </section>
+
+        <section>
+            <h2> JS Bitwise</h2>
+            <p>Operator untuk manipulasi bit: <code>&</code> (AND), <code>|</code> (OR), <code>^</code> (XOR).</p>
+        </section>
+
+        <section>
+            <h2> JS RegExp</h2>
+            <p>Ekspresi reguler untuk mencocokkan pola teks.</p>
+            <pre>
+let regex = /hello/i;
+console.log(regex.test("Hello")); // Output: true
+            </pre>
+        </section>
+
+        <section>
+            <h2> JS Precedence</h2>
+            <p>Menentukan prioritas operator dalam ekspresi.</p>
+        </section>
+    </div>
+ 
+    <footer>
+      <p>&copy; 2024 JavaScript Summary | All Rights Reserved</p>
+  </footer>
 </body>
 </html>
