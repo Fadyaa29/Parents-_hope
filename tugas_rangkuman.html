@@ -875,9 +875,285 @@ console.log(regex.test("Hello")); // Output: true
             <p>Menentukan prioritas operator dalam ekspresi.</p>
         </section>
     </div>
- 
-    <footer>
-      <p>&copy; 2024 JavaScript Summary | All Rights Reserved</p>
-  </footer>
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Summary</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: Arial, sans-serif;
+    }
+    h1 {
+      text-align: center;
+      margin: 20px 0;
+      color: #0d6efd;
+      font-weight: bold;
+    }
+    .card {
+      margin-bottom: 20px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #343a40;
+      color: white;
+      margin-top: 20px;
+    }
+    pre {
+      background-color: #f1f1f1;
+      padding: 10px;
+      border-radius: 4px;
+      font-size: 0.9em;
+      overflow-x: auto;
+    }
+    code {
+      color: #d63384;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-4">
+    <h1></h1>
+    <div class="row">
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title text-primary">JS Errors</h5>
+            <p class="card-text">Error seperti SyntaxError, TypeError, dan ReferenceError membantu menangkap kesalahan kode.</p>
+            <pre><code>// Example of TypeError
+let num = 5;
+num.toUpperCase(); // Error: toUpperCase is not a function</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title text-primary">JS Scope</h5>
+            <p class="card-text">Scope menentukan di mana variabel dapat diakses dalam kode.</p>
+            <pre><code>let globalVar = "I'm global!";
+function testScope() {
+  let localVar = "I'm local!";
+  console.log(globalVar); // OK
+  console.log(localVar);  // OK
+}
+testScope();
+console.log(localVar); // Error: localVar is not defined</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title text-primary">JS Hoisting</h5>
+            <p class="card-text">Deklarasi diangkat ke atas scope sebelum eksekusi.</p>
+            <pre><code>console.log(myVar); // undefined
+var myVar = "Hoisted!";
+function hoistTest() {
+  console.log(myFunction()); // Hoisted Function!
+  function myFunction() {
+    return "Hoisted Function!";
+  }
+}</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title text-primary">JS Strict Mode</h5>
+            <p class="card-text">Mendeteksi kesalahan dan mencegah penggunaan fitur JS yang tidak aman.</p>
+            <pre><code>'use strict';
+myVar = 10; // Error: myVar is not defined</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title text-primary">JS <code>this</code> Keyword</h5>
+            <p class="card-text"><code>this</code> merujuk ke objek yang memanggil fungsi saat ini.</p>
+            <pre><code>const person = {
+  name: 'John',
+  greet() {
+    console.log(this.name); // 'John'
+  }
+};
+person.greet();</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title text-primary">JS Arrow Function</h5>
+            <p class="card-text">Fungsi ringkas, sering digunakan dengan callback.</p>
+            <pre><code>const add = (a, b) => a + b;
+console.log(add(5, 3)); // 8</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title text-primary">JS Classes</h5>
+            <p class="card-text">Kelas adalah template untuk membuat objek dengan properti dan metode tertentu.</p>
+            <pre><code>class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+  speak() {
+    return ${this.name} makes a noise.;
+  }
+}
+const dog = new Animal('Dog');
+console.log(dog.speak());</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title text-primary">JS Modules</h5>
+            <p class="card-text">Memungkinkan membagi kode menjadi file kecil.</p>
+            <pre><code>// module.js
+export function greet(name) {
+  return Hello, ${name}!;
+}
+
+// main.js
+import { greet } from './module.js';
+console.log(greet('World'));</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title text-primary">JS JSON</h5>
+            <p class="card-text">JSON adalah format data ringan untuk mentransfer data.</p>
+            <pre><code>const json = '{"name": "Alice", "age": 25}';
+const obj = JSON.parse(json);
+console.log(obj.name); // Alice</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title text-primary">JS Debugging</h5>
+            <p class="card-text">Gunakan <code>console.log</code> atau DevTools untuk debugging.</p>
+            <pre><code>let count = 0;
+console.log('Count is:', count);</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title text-primary">JS Style Guide</h5>
+            <p class="card-text">Panduan penulisan kode JavaScript yang konsisten dan mudah dibaca.</p>
+            <pre><code>// 1. Gunakan camelCase untuk nama variabel
+let firstName = "John";
+
+// 2. Tambahkan titik koma di akhir pernyataan
+let age = 25;
+
+// 3. Gunakan single quotes untuk string
+let city = 'New York';
+
+// 4. Gunakan indentasi 2 spasi
+function greet(name) {
+  console.log('Hello, ' + name);
+}
+
+// 5. Hindari kode yang terlalu panjang
+let message = 'This is a very long message that should be broken into smaller parts for better readability.';
+</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title text-primary">JS Best Practices</h5>
+            <p class="card-text">Gunakan nama variabel bermakna dan hindari kebocoran global.</p>
+            <pre><code>// Avoid global variables
+let total = 100; // Good practice</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title text-primary">JS Mistakes</h5>
+            <p class="card-text">Kesalahan umum meliputi penggunaan variabel tanpa deklarasi atau lupa menutup tanda kurung.</p>
+            <pre><code>// Contoh variabel tanpa deklarasi
+function calculate() {
+  result = 10; // Error: variabel tanpa deklarasi
+}</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title text-primary">JS Performance</h5>
+            <p class="card-text">Optimalkan performa dengan meminimalkan manipulasi DOM dan menggunakan metode efisien.</p>
+            <pre><code>// Batasi akses ke DOM
+let element = document.getElementById('item');
+for (let i = 0; i < 1000; i++) {
+  element.style.color = 'blue';
+}</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title text-primary">JS Reserved Words</h5>
+            <p class="card-text">Beberapa kata kunci JavaScript dipesan dan tidak dapat digunakan sebagai nama variabel.</p>
+            <pre><code>// Contoh penggunaan kata kunci yang dilarang
+let class = "Math"; // Error
+let function = "run"; // Error</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <p>JavaScript Summary © 2024</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
